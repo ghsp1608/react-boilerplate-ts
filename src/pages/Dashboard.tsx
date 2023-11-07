@@ -1,5 +1,4 @@
-import { Box, Container, CssBaseline } from "@mui/material";
-import BasicTabs from "../components/BasicTabs";
+import BasicTabs from "@components/BasicTabs";
 import useAuthStore from "../state/client/store";
 import { Outlet } from "react-router-dom";
 
