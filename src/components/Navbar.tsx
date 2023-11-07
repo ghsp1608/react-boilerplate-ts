@@ -12,9 +12,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Dashboard", "Report", "Support"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
@@ -123,6 +123,8 @@ function Navbar() {
               {pages.map((page) => (
                 <Button
                   key={page}
+                  component={Link}
+                  to="/dashboard"
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >

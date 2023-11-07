@@ -1,7 +1,7 @@
 // import ErrorBoundary from "./Components/ErrorBoundary";
 // import { get } from "./store";
 
-import useAuthStore from "../state/store";
+import useAuthStore from "../state/client/store";
 
 // import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 

@@ -1,8 +1,26 @@
-import React from "react";
-import DI from "../../hoc/DI";
+import usePosts from "../../state/server/usePosts";
+import { Container, List, ListItem } from "@mui/material";
 
-const ProspectReport = () => {
-  return <div>ProspectReport</div>;
+const ProspectReport = (): React.ReactNode => {
+  const { data: posts, isLoading, error } = usePosts();
+
+  if (isLoading) {
+    return <p>Loading ...</p>;
+  }
+
+  if (error) {
+    return <p>{error.message}</p>;
+  }
+
+  return (
+    <Container>
+      <List>
+        {posts?.map((post, index) => (
+          <ListItem key={index}>{post.title}</ListItem>
+        ))}
+      </List>
+    </Container>
+  );
 };
 
-export default DI(ProspectReport);
+export default ProspectReport;

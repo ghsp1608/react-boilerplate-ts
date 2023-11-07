@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <React.Fragment>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <Container fixed>
         <Box sx={{ bgcolor: "#fff", height: "30vh" }} />
         <Navbar />

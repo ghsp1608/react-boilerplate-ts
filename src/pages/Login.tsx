@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Button, Container, Paper, TextField, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import useAuthStore from "../state/store";
+import useAuthStore from "../state/client/store";
 
 export default function Login() {
   const [email, setEmail] = useState("");
