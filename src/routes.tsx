@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import ErrorPage from "@components/ErrorPage";
@@ -23,7 +23,8 @@ const router = createBrowserRouter([
           </AuthRequired>
         ),
         children: [
-          { index: true, path: "credit-report", element: <CreditReport /> },
+          { index: true, element: <Navigate to={"credit-report"} /> },
+          { path: "credit-report", element: <CreditReport /> },
           { path: "prospect-report", element: <ProspectReport /> },
           { path: "group-report", element: <GroupReport /> },
         ],
