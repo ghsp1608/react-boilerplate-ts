@@ -9,6 +9,9 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const theme = createTheme();
 const queryClient = new QueryClient();
 
+// add error boundary
+// eslint
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

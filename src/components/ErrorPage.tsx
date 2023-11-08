@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 const ErrorPage = (): React.ReactNode => {
-  const error = useRouteError();
+  const error = useRouteError() as Error;
+
+  useEffect(() => {
+    console.log(error);
+  }, []);
 
   return (
     <>
@@ -9,7 +14,7 @@ const ErrorPage = (): React.ReactNode => {
       {isRouteErrorResponse(error) ? (
         <p>Invalid Route</p>
       ) : (
-        <p>Sorry, an unexpected error has occurred.</p>
+        <p>Sorry, an unexpected error has occurred {error.message}.</p>
       )}
     </>
   );

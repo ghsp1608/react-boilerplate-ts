@@ -1,5 +1,5 @@
-import BasicTabs from "@components/BasicTabs";
-import useAuthStore from "../state/client/store";
+import BasicTabs from "@/components/BasicTabs";
+import useAuthStore from "@/state/client/store";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = (): React.ReactNode => {

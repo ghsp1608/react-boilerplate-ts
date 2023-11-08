@@ -1,6 +1,6 @@
+import useAuthStore from "@/state/client/store";
 import React from "react";
 import { Navigate } from "react-router-dom";
-import useAuthStore from "../state/client/store";
 
 interface Props {
   children: React.ReactNode;
@@ -8,8 +8,6 @@ interface Props {
 
 const AuthRequired = ({ children }: Props): React.ReactNode => {
   const user = useAuthStore((s) => s.user);
-
-  console.log({ children });
 
   if (!user.name) {
     return <Navigate to="/" />;

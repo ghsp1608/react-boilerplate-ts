@@ -1,4 +1,5 @@
-import usePosts from "../../state/server/usePosts";
+import DI from "@/hoc/DI";
+import usePosts from "@/state/server/usePosts";
 import { Container, List, ListItem } from "@mui/material";
 
 const ProspectReport = (): React.ReactNode => {
@@ -23,4 +24,4 @@ const ProspectReport = (): React.ReactNode => {
   );
 };
 
-export default ProspectReport;
+export default DI(ProspectReport);

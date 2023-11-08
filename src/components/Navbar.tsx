@@ -39,8 +39,8 @@ function Navbar() {
   };
 
   const handleCloseUserMenu = (setting: string): void => {
-    console.log(setting);
-    // setAnchorElUser(null);
+    // console.log(setting);
+    setAnchorElUser(null);
 
     setting = setting.toLowerCase();
 

@@ -13,8 +13,8 @@ export default function Login() {
 
   const handleLogin = (): void => {
     // Implement your login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
+    // console.log("Email:", email);
+    // console.log("Password:", password);
     login({ name: "aa", role: "CSM" });
     return navigate("/dashboard/credit-report");
   };

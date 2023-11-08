@@ -1,31 +1,15 @@
-// import ErrorBoundary from "./Components/ErrorBoundary";
-// import { get } from "./store";
-
+import ErrorBoundary from "@/components/ErrorBoundary";
 import useAuthStore from "@/state/client/store";
 
-// import { isRouteErrorResponse, useRouteError } from "react-router-dom";
-
 const DI = (Component: any) => {
-  //   const dispatch = useContext(DispatchContext);
   return function (props: any) {
-    // const dispatcher = useDispatch();
-    const user = useAuthStore((s) => s.user);
+    // const user = useAuthStore((s) => s.user);
 
-    // if (user.role) {
-    //   console.log(11);
-    // }
-
-    console.log(Component);
-    if (Component().props.children === "ProspectReport") {
-      return "can't access";
-    }
-
-    // const error = useRouteError();
-    // if (isRouteErrorResponse(error)) {
-    //   return <>404</>;
-    // }
-
-    return <Component {...props}>{props.children}</Component>;
+    return (
+      <ErrorBoundary fallback={<div>Component has failed render</div>}>
+        <Component {...props}>{props.children}</Component>
+      </ErrorBoundary>
+    );
   };
 };
 

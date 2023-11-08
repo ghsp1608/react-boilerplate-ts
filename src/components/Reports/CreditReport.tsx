@@ -1,9 +1,12 @@
 import { Container, List, ListItem } from "@mui/material";
 import Box from "@mui/material/Box";
-import useTodos from "../../state/server/useTodos";
+import DI from "@/hoc/DI";
+import useTodos from "@/state/server/useTodos";
 
-export default function CreditReport() {
+function CreditReport() {
   const { data: todos, isLoading, error } = useTodos();
+
+  // console.log(i);
 
   if (isLoading) {
     return <Box>Loading ...</Box>;
@@ -23,3 +26,5 @@ export default function CreditReport() {
     </Container>
   );
 }
+
+export default DI(CreditReport);
