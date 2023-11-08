@@ -12,6 +12,7 @@ This template provides a minimal setup to get up and running React+typescript ap
 
 ## Directory Structure
 
+```bash
 .
 ├── README.md
 ├── index.html
@@ -44,6 +45,7 @@ This template provides a minimal setup to get up and running React+typescript ap
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
+```
 
 - `assets/` - Stores static files like images, css and js.
 - `components/` - Stores all reusable componets.
