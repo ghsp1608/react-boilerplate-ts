@@ -59,3 +59,12 @@ This template provides a minimal setup to get up and running React+typescript ap
   - `state/server` - stores the server state
 - `types` - Stores all the type definitions
 - `utils/` - Reusable utlities
+
+## Installation
+
+To install the application type:
+
+```bash
+npm i
+npm run dev
+```
