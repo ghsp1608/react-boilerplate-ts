@@ -1,5 +1,4 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
-import useAuthStore from "@/state/client/store";
 
 const DI = (Component: any) => {
   return function (props: any) {

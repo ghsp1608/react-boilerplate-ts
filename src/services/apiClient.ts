@@ -11,12 +11,14 @@ class APIClient<T> {
     this.endpoint = endpoint;
   }
 
-  getAll<T>() {
-    return axiosInstance.get<T[]>(this.endpoint).then((res) => res.data);
+  async getAll() {
+    return await axiosInstance.get<T[]>(this.endpoint).then((res) => res.data);
   }
 
-  post<T>(data: T) {
-    return axiosInstance.post<T>(this.endpoint, data).then((res) => res.data);
+  async post(data: T) {
+    return await axiosInstance
+      .post<T>(this.endpoint, data)
+      .then((res) => res.data);
   }
 }
 

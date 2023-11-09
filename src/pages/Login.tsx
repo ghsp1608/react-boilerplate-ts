@@ -7,9 +7,12 @@ import useAuthStore from "@/state/client/store";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, login, logout } = useAuthStore();
+  const { login } = useAuthStore();
 
   const navigate = useNavigate();
+
+  console.log(import.meta.env.VITE_PORT);
+  console.log(import.meta.env.VITE_APP_BASE_URL);
 
   const handleLogin = (): void => {
     // Implement your login logic here
