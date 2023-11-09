@@ -68,3 +68,25 @@ To install the application type:
 npm i
 npm run dev
 ```
+
+## Adding new environment
+
+To add a new environment add a file named `.env.<environment_name>` inside the `env/` folder in root
+directory. For example:
+
+_.env.prestage_
+
+```text
+VITE_APP_BASE_URL= https://example.com/
+VITE_APP_SOCKET_URL= https://socket.example.com/
+```
+
+Next, add the corresponding command in the `scripts` section of the `package.json` fie as follows:
+
+```json
+  "scripts": {
+    # ... other configs
+    "prestage": "vite --mode prestage",
+    # ... other configs
+  },
+```

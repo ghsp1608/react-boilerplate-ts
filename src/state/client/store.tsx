@@ -14,7 +14,7 @@ interface AuthStore {
 const useAuthStore = create<AuthStore>((set) => ({
   user: {} as User,
   login: (user) =>
-    set((store) => {
+    set(() => {
       return {
         user: {
           name: user.name,
@@ -23,7 +23,7 @@ const useAuthStore = create<AuthStore>((set) => ({
       };
     }),
   logout: () =>
-    set((store) => {
+    set(() => {
       return {
         user: {
           name: "",
